@@ -1,5 +1,6 @@
 package guru.springframework.sbmjackson.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -18,6 +19,8 @@ import java.util.UUID;
 @Builder
 public class BeerDto {
 
+    // Should not be used with property naming strategy (will remain the same regardless of the strategy)
+    @JsonProperty("beerId")
     @Null
     private UUID id;
 
